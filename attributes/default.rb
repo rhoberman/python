@@ -24,6 +24,8 @@ if python['install_method'] == 'package'
   case platform
   when "smartos"
     default['python']['prefix_dir']         = '/opt/local'
+  when "amazon"
+    default['python']['prefix_dir']         = '/usr/local'
   else
     default['python']['prefix_dir']         = '/usr'
   end
